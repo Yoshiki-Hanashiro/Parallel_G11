@@ -10,7 +10,8 @@ def pool_pal(parallel, proc, pal_num=10):
     #print(parallel)
     #result = p.map(eval(parallel),range(pal_num))
     result = p.map(parallel,range(1,pal_num + 1))
-    print(result)
+    # print(result)
+    return result
 
 
 if __name__ == "__main__":
