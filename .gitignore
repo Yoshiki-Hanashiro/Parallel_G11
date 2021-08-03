@@ -6,3 +6,6 @@ Thumbs.db
 
 #IDE?のフォルダ
 .idea
+
+#キャッシュフォルダ
+__pycache__
