@@ -1,32 +1,25 @@
 from time import sleep
 import random
 from multiprocessing import Process
+from multiprocessing import Array
+# process(プロセス数,コインを回す回数)で実行できる
 
 
-def coins(count, name):
-    number_list = []
-    for i in range(count):
-        print(name+":"+str(i))
+def coins(count, name, arr):
+    for j in range(count):
+        print("p"+str(name)+":"+str(j))
         sleep(0.2)
-        number_list.append(random.randint(0, 1))
-    print(number_list)
-    return number_list
+        arr[name*count+j] = random.randint(0, 1)
 
 
-def process(process_number, num):
-    # num:プロセス数
-    p_list = []
-    for i in range(process_number):
-        p = Process(target=coins, args=(num, "p"+str(i)))
+def process(process_count, coin_count):
+    process_list = []
+    arr = Array('i', range(process_count*coin_count))
+    for i in range(process_count):
+        p = Process(target=coins, args=(coin_count, i, arr))
         p.start()
-        p_list.append(p)
+        process_list.append(p)
 
-    # プロセスの終了
-    for j in p_list:
+    for j in process_list:
         j.join()
-    return p_list
-
-
-if __name__ == '__main__':
-    # coins(50000, "main")
-    process(10, 10)
+    return arr
