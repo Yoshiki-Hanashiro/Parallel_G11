@@ -2,7 +2,7 @@ import time
 import random
 
 def coin(x):
-    print("num: %d" % x)
+    print("\r"+"num: %d" % x, end=" ")
     #time.sleep(0.2)
     coin_num = random.randint(0,1)
     return(coin_num)
