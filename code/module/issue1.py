@@ -14,11 +14,11 @@ def coin(A):
             back_count += 1
 
     print("表が{}回出ました,裏が{}回出ました".format(table_count,back_count))
-    P = math.factorial(A)/(math.factorial(table_count)*math.factorial(back_count))*0.5**100
+    P = math.factorial(A)/(math.factorial(table_count)*math.factorial(back_count))*0.5**A
     print("今回の事象が起こる確率は{}です".format(P))
 
 
-
+coin(2)
 
 
 

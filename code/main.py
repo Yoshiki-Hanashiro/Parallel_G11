@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
+import time
 from module import pool_parallel as po
 from module import random_sample as ras
-import time
-
 # 100000
 pool_time = time.time()
 max_num = 100000
