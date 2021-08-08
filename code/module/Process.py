@@ -8,18 +8,23 @@ from multiprocessing import Array
 def coins(count, name, arr):
     for j in range(count):
         print("p"+str(name)+":"+str(j))
-        sleep(0.2)
+        # sleep(0.2)
         arr[name*count+j] = random.randint(0, 1)
 
 
 def process(process_count, coin_count):
     process_list = []
     arr = Array('i', range(process_count*coin_count))
+    num = int(coin_count / process_count)
     for i in range(process_count):
-        p = Process(target=coins, args=(coin_count, i, arr))
+        p = Process(target=coins, args=(num, i, arr))
         p.start()
         process_list.append(p)
 
     for j in process_list:
         j.join()
-    return arr
+    return arr[:]
+
+
+if __name__ == "__main__":
+    print(process(4, 100))
