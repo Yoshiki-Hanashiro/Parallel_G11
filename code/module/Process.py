@@ -4,10 +4,10 @@ from multiprocessing import Process
 from multiprocessing import Array
 # process(プロセス数,コインを回す回数)で実行できる
 
-
 def coins(count, name, arr):
     for j in range(count):
-        print("p"+str(name)+":"+str(j))
+        if(j<5):
+            print("p"+str(name)+":"+str(j))
         # sleep(0.2)
         arr[name*count+j] = random.randint(0, 1)
 

@@ -2,8 +2,10 @@ import time
 import random
 
 def coin(x):
-    print("\r"+"num: %d" % x, end=" ")
+    #print("\r"+"num: %d" % x, end=" ")
     #time.sleep(0.2)
+    if(x<15):
+        print("num: %d" % x)
     coin_num = random.randint(0,1)
     return(coin_num)
 
