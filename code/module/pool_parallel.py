@@ -10,11 +10,7 @@ def pool_pal(parallel, proc, pal_num=10):
     #print(parallel)
     #result = p.map(eval(parallel),range(pal_num))
     result = p.map(parallel,range(1,pal_num + 1))
-<<<<<<< HEAD
-    print(result)
-=======
-    # print(result)
->>>>>>> 0e18140c3627316cbbeea9a922ba842b2a8cf70f
+    #print(result)
     return result
 
 
