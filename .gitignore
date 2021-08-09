@@ -11,3 +11,5 @@ Thumbs.db
 code/module/__pycache__
 
 __pycache__
+
+*.pyc
