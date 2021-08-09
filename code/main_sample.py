@@ -5,7 +5,7 @@ import time
 
 # 100000
 pool_time = time.time()
-max_num = 100000
+max_num = 100
 result = po.pool_pal(ras.coin, 4, max_num)
 end_pool_time = time.time() - pool_time
 num0 = result.count(0)
@@ -17,7 +17,6 @@ time_no = time.time()
 coin_num = []
 for i in range(max_num):
     coin_num.append(ras.coin(i))
-print(coin_num)
 end_time = time.time() - time_no
 
 print ("並列化あり(pool):{0}".format(end_pool_time) + "[sec]")

@@ -9,3 +9,5 @@ Thumbs.db
 
 #キャッシュフォルダ
 code/module/__pycache__
+
+__pycache__
