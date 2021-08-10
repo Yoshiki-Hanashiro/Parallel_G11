@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 from module import pool_parallel as po
-from module import random_sample as ras
+from module import argorism as arg
 import time
 
 # 100000
 pool_time = time.time()
 max_num = 100
-result = po.pool_pal(ras.coin, 4, max_num)
+result = po.pool_pal(arg.coin, 4, max_num)
 end_pool_time = time.time() - pool_time
 num0 = result.count(0)
 probability = num0 / max_num * 100
@@ -16,7 +16,7 @@ probability = num0 / max_num * 100
 time_no = time.time()
 coin_num = []
 for i in range(max_num):
-    coin_num.append(ras.coin(i))
+    coin_num.append(arg.coin(i))
 end_time = time.time() - time_no
 
 print ("並列化あり(pool):{0}".format(end_pool_time) + "[sec]")

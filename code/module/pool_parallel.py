@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from multiprocessing import Pool
 from . import random_sample as ras
+from . import argorism as arg
 
 # 並列処理させる関数
 def pool_pal(parallel, proc, pal_num=10):
@@ -8,6 +9,5 @@ def pool_pal(parallel, proc, pal_num=10):
     result = p.map(parallel,range(1,pal_num + 1))
     return result
 
-
 if __name__ == "__main__":
-    pool_pal(ras.coin,4,3)
+    pool_pal(arg.coin,4,3)
