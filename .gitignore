@@ -3,3 +3,13 @@
 
 #Windows専用ファイル
 Thumbs.db
+
+#IDE?のフォルダ
+.idea
+
+#キャッシュフォルダ
+code/module/__pycache__
+
+__pycache__
+
+*.pyc
