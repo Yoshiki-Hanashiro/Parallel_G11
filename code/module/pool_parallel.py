@@ -2,7 +2,6 @@
 from multiprocessing import Pool
 from . import random_sample as ras
 
-
 # 並列処理させる関数
 def pool_pal(parallel, proc, pal_num=10):
     p = Pool(proc)

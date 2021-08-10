@@ -5,7 +5,7 @@ def coin(x,sleep_time = 0):
     if x < 16:print("num: %d" % x)
     time.sleep(sleep_time)
     coin_num = random.randint(0,1)
-    return(coin_num,x)
+    return(coin_num)
 
 def dice(x,sleep_time = 0):
     if x < 16:print("num: %d" % x)
